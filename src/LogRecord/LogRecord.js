@@ -27,6 +27,7 @@ export class LogRecord {
         this.error = error;
     }
 }
+
 export var LogRecordType;
 (function (LogRecordType) {
     LogRecordType[LogRecordType["HISTORY"] = 3] = "HISTORY";
@@ -35,6 +36,7 @@ export var LogRecordType;
     // DELETED = 0x80000000,
     // IGNORE = 0x100
 })(LogRecordType || (LogRecordType = {}));
+
 export var LogRecordError;
 (function (LogRecordError) {
     LogRecordError[LogRecordError["NO_ERR"] = 0] = "NO_ERR";
@@ -43,6 +45,7 @@ export var LogRecordError;
     LogRecordError[LogRecordError["LOG_INDEX_ERR"] = 6] = "LOG_INDEX_ERR";
     LogRecordError[LogRecordError["REC_SIZE_ERR"] = 8] = "REC_SIZE_ERR";
 })(LogRecordError || (LogRecordError = {}));
+
 export class HistoryLogRecord extends LogRecord {
     constructor(logType, logIndex, timestamp, secondsSincePowerUp, error, historyLogRecordType, flags) {
         super(logType, logIndex, timestamp, secondsSincePowerUp, error);

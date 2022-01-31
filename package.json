@@ -1,6 +1,7 @@
 {
   "name": "omnipod-file-reader",
   "version": "1.0.1",
+  "type": "module",
   "description": "An Omnipod export file parser",
   "main": "src/index.js",
   "scripts": {

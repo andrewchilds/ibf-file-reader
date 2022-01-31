@@ -1,3 +1,4 @@
-# *.ibf
-/dist/
-/node_modules/
+*.ibf
+.DS_Store
+dist
+node_modules

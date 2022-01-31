@@ -18,7 +18,8 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
  * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-import { ActivateLogRecord, AlarmLogRecord, AlarmType, BasalLogRecord, BloodGlucoseFlag, BloodGlucoseLogRecord, BolusLogRecord, CarbLogRecord, DateChangeLogRecord, HistoryLogRecord, HistoryLogRecordFlag, HistoryLogRecordType, LogRecordType, PumpAlarmDetails, RemoteHazardAlarmLogRecord, SuggestedCalculationLogRecord, TerminateBasalLogRecord, TerminateBolusLogRecord, TimeChangeLogRecord } from './LogRecord';
+import { ActivateLogRecord, AlarmLogRecord, AlarmType, BasalLogRecord, BloodGlucoseFlag, BloodGlucoseLogRecord, BolusLogRecord, CarbLogRecord, DateChangeLogRecord, HistoryLogRecord, HistoryLogRecordFlag, HistoryLogRecordType, LogRecordType, PumpAlarmDetails, RemoteHazardAlarmLogRecord, SuggestedCalculationLogRecord, TerminateBasalLogRecord, TerminateBolusLogRecord, TimeChangeLogRecord } from './LogRecord.js';
+
 export function parseLogRecord(ibfRecord) {
     let it = ibfRecord.byteReader();
     if (it.remaining() < 18) {
