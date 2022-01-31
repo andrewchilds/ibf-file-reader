@@ -1,19 +1,17 @@
 {
-  "name": "ibf-file-reader",
+  "name": "omnipod-file-reader",
   "version": "1.0.1",
-  "description": "ibf-file-reader",
-  "main": "src/LogRecord/LogRecordParser",
+  "description": "An Omnipod export file parser",
+  "main": "src/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": { 
+  "author": {
     "name": "Darren Lee",
     "email": "balshor@gmail.com"
   },
   "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^10.12.18"
-  }
+  "devDependencies": {}
 }
