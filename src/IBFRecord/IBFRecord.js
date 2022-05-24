@@ -127,7 +127,11 @@ export class IBFByteReader {
         let seconds = this.nextInt8();
         let minutes = this.nextInt8();
         let hours = this.nextInt8();
-        return new Date(year, month - 1, day, hours, minutes, seconds);
+
+        // Returning a string instead of a date object. Otherwise the local
+        // time of the server overrides the local time of the Omnipod.
+        // return new Date(year, month - 1, day, hours, minutes, seconds);
+        return `${year}-${pad(month)}-${pad(day)}T${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
     }
     /* the next version, as major.minor.patch with numerical components */
     nextVersion() {
@@ -153,4 +157,8 @@ export class IBFByteReader {
         this.offset += fixedLength;
         return strBuffer.toString('latin1');
     }
+}
+
+function pad(n) {
+  return (n + '').padStart(2, '0');
 }
